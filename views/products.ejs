@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="styles   heet" href="https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FCI Store</title>
+</head>
+<body>
+    <!-----featured categories------->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <span style="padding-bottom: 15px;display: inline-block;">Clothes</span>
+                    <img src="/images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <span style="padding-bottom: 15px;display: inline-block;">Shoes</span>
+                    <img src="/images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <span style="padding-bottom: 15px;display: inline-block;">Sports Clothes</span>
+                    <img src="/images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-----featured products------->
+
+    <div class="small-container">
+        <h2 class="title">Featured Productes</h2>
+        <div class="row">
+            <% for (let product of products){%>
+            <div class="col-4">
+                <img src="/<%=product.image%>">
+                <h4><%=product.description%></h4>
+                    
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>$<%= product.price%></p> 
+            </div> 
+            <%}%>
+        </div>
+        <h2 class="title">Latest Productes</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="/images/product-3.jpg">
+                <h4>Red Printed T-shirt</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>$50.00</p> 
+            </div>
+
+            <div class="col-4">
+                <img src="/images/product-2.jpg">
+                <h4>Red Printed T-shirt</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>$50.00</p> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
